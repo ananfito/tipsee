@@ -97,6 +97,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - The following helped me figure out how to write the `handleFocus()` function so that it would clear the focus for the radio inputs when the Custom tip option was selected.
   - [React + TypeScript: Handling onFocus and onBlur events](https://www.kindacode.com/article/react-typescript-handling-onfocus-and-onblur-events/)
   - [How to clear radio button in Javascript?](https://stackoverflow.com/questions/2554116/how-to-clear-radio-button-in-javascript)
+  - [Clear and reset form input fields](https://stackoverflow.com/questions/43922508/clear-and-reset-form-input-fields)
 
 ## Author
 

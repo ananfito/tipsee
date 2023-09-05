@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import { func } from 'prop-types'
 
 function App() {
   const [billAmt, setBillAmt] = useState(0)
@@ -8,8 +7,6 @@ function App() {
   const [numOfPeople, setNumOfPeople] = useState(1)
   const tipAmt = billAmt * tipPercentage
   const totalAmt = billAmt + tipAmt
-
-  console.log(billAmt, tipPercentage, numOfPeople, tipAmt, totalAmt)
 
   function handleChange(event) {
     const { id, value } = event.target 
@@ -49,112 +46,111 @@ function App() {
   }
 
   return (
-    <main>
-      <section>
-        <form>
-          <label htmlFor="bill-amt">Bill
-            <input 
-              type="text" 
-              id="bill-amt"
-              onChange={handleChange}
-            />
-          </label>
-          <p>Select Tip %</p>
-          <label htmlFor="five-percent-tip">5%
-            <input 
-              type="radio"
-              className="radio-btn"
-              name="tip-percentage" 
-              id="five-percent-tip"
-              value={.05}
-              onChange={handleChange}
-              onFocus={handleFocus}
-            />
-          </label>
-          <label htmlFor="ten-percent-tip">10%
-            <input 
-              type="radio"
-              className="radio-btn" 
-              name="tip-percentage" 
-              id="ten-percent-tip"
-              value={.10} 
-              onChange={handleChange}
-              onFocus={handleFocus}
-            />
-          </label>
-          <label htmlFor="fifteen-percent-tip">15%
-            <input 
-              type="radio"
-              className="radio-btn" 
-              name="tip-percentage" 
-              id="fifteen-percent-tip"
-              value={.15}
-              onChange={handleChange}
-              onFocus={handleFocus} 
-            />
-          </label>
-          <label htmlFor="twenty-five-percent-tip">25%
-            <input 
-              type="radio"
-              className="radio-btn" 
-              name="tip-percentage" 
-              id="twenty-five-percent-tip"
-              value={.25}
-              onChange={handleChange}
-              onFocus={handleFocus} 
-            />
-          </label>
-          <label htmlFor="fifty-percent-tip">50%
-            <input 
-              type="radio"
-              className="radio-btn" 
-              name="tip-percentage" 
-              id="fifty-percent-tip"
-              value={.5}
-              onChange={handleChange} 
-              onFocus={handleFocus}
-            />
-          </label>
-          <label htmlFor="custom-tip-percentage">Custom
-            <input 
-              type="number" 
-              name="tip-percentage"
-              id="custom-tip-percentage"
-              onChange={handleChange} 
-              onFocus={handleFocus}
-            />
-          </label>
-          <label htmlFor="number-of-people">Number of People
-            <input 
-              type="number" 
-              name="number-of-peple" 
-              id="number-of-people"
-              onChange={handleChange} 
-            />
-          </label>
-          
-          <div className="results">
-            <div>
-              <p>Tip Amount</p>
-              <p>/ person</p>
-              <p id="tip-amt">${(tipAmt / numOfPeople).toFixed(2)}</p>
-            </div>
-            <div>
-              <p>Total</p>
-              <p>/ person</p>
-              <p id="total-amt">${(totalAmt / numOfPeople).toFixed(2)}</p>
-            </div>
-            <input 
-              type="reset" 
-              value="Reset" 
-              className="reset-btn" 
-              onClick={handleReset} 
-            />
+    <div className="container">
+      <h1 className='title'>Splitter</h1>
+      <form className="form">
+        <label htmlFor="bill-amt">Bill
+        </label>
+        <input 
+            type="text" 
+            id="bill-amt"
+            name="bill-amt"
+            onChange={handleChange}
+          />
+        <p>Select Tip %</p>
+        <label htmlFor="five-percent-tip">5%
+          <input 
+            type="radio"
+            className="radio-btn"
+            name="tip-percentage" 
+            id="five-percent-tip"
+            value={.05}
+            onChange={handleChange}
+            onFocus={handleFocus}
+          />
+        </label>
+        <label htmlFor="ten-percent-tip">10%
+          <input 
+            type="radio"
+            className="radio-btn" 
+            name="tip-percentage" 
+            id="ten-percent-tip"
+            value={.10} 
+            onChange={handleChange}
+            onFocus={handleFocus}
+          />
+        </label>
+        <label htmlFor="fifteen-percent-tip">15%
+          <input 
+            type="radio"
+            className="radio-btn" 
+            name="tip-percentage" 
+            id="fifteen-percent-tip"
+            value={.15}
+            onChange={handleChange}
+            onFocus={handleFocus} 
+          />
+        </label>
+        <label htmlFor="twenty-five-percent-tip">25%
+          <input 
+            type="radio"
+            className="radio-btn" 
+            name="tip-percentage" 
+            id="twenty-five-percent-tip"
+            value={.25}
+            onChange={handleChange}
+            onFocus={handleFocus} 
+          />
+        </label>
+        <label htmlFor="fifty-percent-tip">50%
+          <input 
+            type="radio"
+            className="radio-btn" 
+            name="tip-percentage" 
+            id="fifty-percent-tip"
+            value={.5}
+            onChange={handleChange} 
+            onFocus={handleFocus}
+          />
+        </label>
+        <label htmlFor="custom-tip-percentage">Custom
+          <input 
+            type="number" 
+            name="tip-percentage"
+            id="custom-tip-percentage"
+            onChange={handleChange} 
+            onFocus={handleFocus}
+          />
+        </label>
+        <label htmlFor="number-of-people">Number of People
+          <input 
+            type="number" 
+            name="number-of-peple" 
+            id="number-of-people"
+            onChange={handleChange} 
+          />
+        </label>
+        
+        <div className="results">
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+            <p id="tip-amt">${(tipAmt / numOfPeople).toFixed(2)}</p>
           </div>
-          
-        </form>
-      </section>
-    </main>
+          <div>
+            <p>Total</p>
+            <p>/ person</p>
+            <p id="total-amt">${(totalAmt / numOfPeople).toFixed(2)}</p>
+          </div>
+          <input 
+            type="reset" 
+            value="Reset" 
+            className="reset-btn" 
+            onClick={handleReset} 
+          />
+        </div>
+      </form>
+    </div>
   )
 }
 
