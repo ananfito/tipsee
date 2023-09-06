@@ -98,6 +98,7 @@ Use this section to outline areas that you want to continue focusing on in futur
   - [React + TypeScript: Handling onFocus and onBlur events](https://www.kindacode.com/article/react-typescript-handling-onfocus-and-onblur-events/)
   - [How to clear radio button in Javascript?](https://stackoverflow.com/questions/2554116/how-to-clear-radio-button-in-javascript)
   - [Clear and reset form input fields](https://stackoverflow.com/questions/43922508/clear-and-reset-form-input-fields)
+- [Wrapping and breaking text](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text) - This guide helped me figure out how to break up the text for the title on multiple lines.
 
 ## Author
 

@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className='title'>Splitter</h1>
+      <div className='title'>Splitter</div>
       <form className="form">
         <label htmlFor="bill-amt">Bill
         </label>
@@ -132,14 +132,18 @@ function App() {
         </label>
         
         <div className="results">
-          <div>
-            <p>Tip Amount</p>
-            <p>/ person</p>
+          <div className='flex'>
+            <div>
+              <p className='amount'>Tip Amount</p>
+              <p className='denominator'>/ person</p>
+            </div>
             <p id="tip-amt">${(tipAmt / numOfPeople).toFixed(2)}</p>
           </div>
-          <div>
-            <p>Total</p>
-            <p>/ person</p>
+          <div className='flex'>
+            <div>
+              <p className='amount'>Total</p>
+              <p className='denominator'>/ person</p>
+            </div>
             <p id="total-amt">${(totalAmt / numOfPeople).toFixed(2)}</p>
           </div>
           <input 
