@@ -51,12 +51,15 @@ function App() {
       <form className="form">
         <label htmlFor="bill-amt">Bill
         </label>
-        <input 
-            type="text" 
-            id="bill-amt"
-            name="bill-amt"
-            onChange={handleChange}
-          />
+        <div className="bill-amt">
+          <img src="src/assets/icon-dollar.svg" alt="dollar sign" />
+          <input
+              type="text"
+              id="bill-amt"
+              name="bill-amt"
+              onChange={handleChange}
+            />
+        </div>
         <p>Select Tip %</p>
         <label htmlFor="five-percent-tip">5%
           <input 
